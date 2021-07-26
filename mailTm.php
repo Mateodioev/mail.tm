@@ -99,7 +99,7 @@ class MailTm {
 
 	// Create the account | establece el accountId
 	public static function CreateAccount($mailI = NULL, $passI = NULL) {
-		if (empty($mail) || empty($pass)) {
+		if (empty($mailI) || empty($passI)) {
 			// Create the acount with random datas
 			self::Datas();
 		} else {
