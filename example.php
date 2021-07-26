@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Repository: 
+ * Repository: https://github.com/Mateodioev/mail.tm
  */
 require 'mailTm.php';
 
