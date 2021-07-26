@@ -72,7 +72,7 @@ Installation
 ### Install source from GitHub
 To install the source code:
 
-    $ git clone https://github.com/devblack/curlx.git
+    $ git clone https://github.com/Mateodioev/mail.tm.git
 
 And include it in your scripts:
 
@@ -80,4 +80,4 @@ And include it in your scripts:
     $MailTm = new MailTm;
 
 
-[the repository]: 
+[the repository]: https://github.com/Mateodioev/mail.tm
