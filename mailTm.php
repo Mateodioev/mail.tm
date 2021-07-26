@@ -84,7 +84,7 @@ class MailTm {
 
 	// Set an password and mail for the resquest
 	private static function Datas() {
-		self::$mail = uniqid('senku_');
+		self::$mail = uniqid();
 		self::$password = str_shuffle(uniqid('1$@'));
 	}
 
