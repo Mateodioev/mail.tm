@@ -2,7 +2,7 @@
 /**
  * PHP class for use mail.tm api
  * Documentation: https://api.mail.tm/
- * Github repository: https://github.com/
+ * Github repository: https://github.com/Mateodioev/mail.tm
  * @author: @Mateodioev
  * Telegram Channel: https://t.me/caspercardergil
  */
