@@ -12,14 +12,14 @@ class MailTm {
 
 	private static array $cURL = [
 		CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HEADER         => false,
-        CURLINFO_HEADER_OUT    => true,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_AUTOREFERER    => true,
-        CURLOPT_CONNECTTIMEOUT => 30,
-        CURLOPT_TIMEOUT        => 60,
-        CURLOPT_SSL_VERIFYPEER => false,
-        CURLOPT_SSL_VERIFYHOST => 0
+        	CURLOPT_HEADER         => false,
+        	CURLINFO_HEADER_OUT    => true,
+        	CURLOPT_FOLLOWLOCATION => true,
+        	CURLOPT_AUTOREFERER    => true,
+        	CURLOPT_CONNECTTIMEOUT => 30,
+        	CURLOPT_TIMEOUT        => 60,
+        	CURLOPT_SSL_VERIFYPEER => false,
+        	CURLOPT_SSL_VERIFYHOST => 0
 	];
 
 	private static string $jwtToken  = '';
