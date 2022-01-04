@@ -42,7 +42,8 @@ class MailTm {
             CURLOPT_SSL_VERIFYHOST => 0
         ]);
 
-        if ($body != null) curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_POSTFIELDS => $body]);
+        if ($body) 
+            curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_POSTFIELDS => $body]);
 
         $response = curl_exec($ch);
         $info = curl_getinfo($ch);
@@ -81,13 +82,8 @@ class MailTm {
     public static function GetDomains() : array 
     {
         $datas = self::send('domains?page=1');
-
-        if ($datas['code'] == 200) {
-            return ['ok' => true, 'domains' => $datas['body'][0]['domain']];
-        } else {
-            return ['ok' => false, 'error' => $datas['error']];
-            
-        }
+        
+       return $datas['code'] == 200 ? ['ok' => true, 'domains' => $datas['body'][0]['domain']] : ['ok' => false, 'error' => $datas['error']];
         
     }
 
@@ -97,7 +93,7 @@ class MailTm {
     public static function CreateAccount(?string $prefix = null, ?string $pass = null) : array 
     {
         self::CreateData();
-
+       
         self::$mail = $prefix ?? self::$mail;
         self::$password = $pass ?? self::$password;
 
@@ -139,9 +135,7 @@ class MailTm {
     {
         $accid = self::$id ?? $accid;
         self::$token = $token ?? self::$token;
-
-        $data = self::send('accounts/'.$accid, 'DELETE');
-        return $data;
+        return self::send('accounts/'.$accid, 'DELETE');
     }
     
     /**
