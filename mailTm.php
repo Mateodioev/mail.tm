@@ -42,8 +42,7 @@ class MailTm {
             CURLOPT_SSL_VERIFYHOST => 0
         ]);
 
-        if ($body) 
-            curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_POSTFIELDS => $body]);
+        if ($body) curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_POSTFIELDS => $body]);
 
         $response = curl_exec($ch);
         $info = curl_getinfo($ch);
