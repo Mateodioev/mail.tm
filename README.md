@@ -17,32 +17,7 @@ Get JWT token
 --------
 
 ```php
-$MailTm::JwtToken('mail', 'password');
-
-```
-
-Get available messages
---------
-
-```php
-$MailTm::GetMessage();
-
-// Imbox is empty
-if ($messages['total'] == 0) {
-	echo "Not found any message\n";
-} else {
-	echo "\nMessages: \nTotal: ".$messages['total']."\n";
-	for ($i=0; $i < $messages['total']; $i++) {
-
-		$dat = $messages['messages'][$i];
-		// Get complet msg
-		$complet = $MailTm::GetMessageId($dat['id'], $jwtToken);
-
-		echo '[I:'.$i.'] Msg id: '.$dat['id']. ' | Title: '.$dat['subject']."\n";
-		echo 'Text: '.$complet['data']['text']."\n";
-		echo 'From: '.$dat['from']['address'].' | Name: '.$dat['from']['name']."\n\n";
-	}
-}
+$MailTm::GetToken('mail', 'password');
 
 ```
 
@@ -60,7 +35,7 @@ Delete the account created
 --------
 
 ```php
-$MailTm::DeleteAccount('jwtToken', 'Account Id');
+$MailTm::Delete('jwtToken', 'Account Id');
 
 ```
 
