@@ -1,5 +1,6 @@
 Mail.TM
 =======
+[![CodeFactor](https://www.codefactor.io/repository/github/mateodioev/mail.tm/badge)](https://www.codefactor.io/repository/github/mateodioev/mail.tm)
 
 ![](https://i.imgur.com/ob0h4xk.png)
 
